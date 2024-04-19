@@ -1,15 +1,7 @@
 /* FONTS */
 
   /* font family */
-  $ff:    'Nunito', sans-serif;
-  $ff2:   'Roboto', 'monospace', sans-serif;
-  $ff3:   'Teko', 'monospace', sans-serif;
-  $ff4:   'Arial', 'monospace', sans-serif;
-  $ff5:   'Roboto', 'monospace', sans-serif;
-  $ff6:   'Inter', 'monospace', sans-serif;
-  $ff7:   'BebasNeueCyrillic', 'monospace', sans-serif;
-  $ff8:   'Bebasneue', 'monospace', sans-serif;
-  $ff9:   'OpenSans', 'monospace', sans-serif;
+  $ff:    '', sans-serif;
 
 
   $fs: 18;  // font size
@@ -46,10 +38,19 @@
 /* END GRID */
 
 /* COLOR */
-  $black:             #444852;
+  $black:             #191C1F;
+  $d-gray:            #5E646A;
+  $gray:              #83898F;
+  $l-gray:            #C2C8CD;
+  $ll-gray:           #ECEFF2;
+  $lll-gray:          #F6F8FA;
   $white:             #FFFFFF;
-  $orange:            #FF5C00;
-  $gray:              #444444;
+  $red:               #F13636;
+  $green:             #25CD82;
+  $d-blue:            #2A6CEA;
+  $blue:              #397DFF;
+  $l-blue:            #ABCAE6;
+
 
 /* END COLOR */
 
