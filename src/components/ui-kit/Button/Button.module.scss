@@ -1,0 +1,27 @@
+@import '../../../assets/scss/vars'; 
+
+.button {
+  border: 1px solid $ll-gray;
+  border-radius: 4px;
+  padding: 20px 40px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: $black;
+  background-color: $ll-gray;
+  transition: all $as $ae;
+
+  &.primary {
+    color: $white;
+    background-color: $d-blue;
+    border: none;
+  }
+
+  &:hover {
+    background-color: $white;
+  }
+
+  &.primary:hover {
+    background-color: $blue;
+  }
+}
