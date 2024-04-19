@@ -1,0 +1,17 @@
+@import "../../../assets/scss/vars";
+@import "../../../assets/scss/mixins";
+
+.wr {
+  position: relative;
+  max-width: 1175px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/* @include media("ms") {
+  .wr {
+    padding: 0 16px;
+  }
+}
+ */
