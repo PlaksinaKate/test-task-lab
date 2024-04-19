@@ -1,0 +1,104 @@
+@import "../../../assets/scss/vars";
+
+.wrapper {
+  position: relative;
+  display: block;
+  margin: 10px;
+  width: max-content;
+
+  span,
+  input,
+  input::placeholder {
+    font-size: 18px;
+    line-height: 1.77;
+    font-weight: 400;
+  }
+
+  span {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    color: $d-gray;
+    transition: all $as $ae;
+  }
+
+  input {
+    padding: 28px 16px 4px;
+    background-color: $lll-gray;
+    box-shadow: 0 0 0 2px $lll-gray;
+    border: none;
+    border-radius: 4px;
+    transition: all $as $ae;
+  }
+
+  input:focus,
+  input.focus {
+    background-color: $white;
+    box-shadow: 0 0 0 2px $l-gray;
+  }
+
+  input:focus ~ span,
+  input.focus ~ span {
+    top: 8px;
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
+  &.error input,
+  &.valid input {
+    padding-right: 55px;
+  }
+
+  &.error input {
+    box-shadow: 0 0 0 2px $red;
+  }
+
+  &.valid input {
+    box-shadow: 0 0 0 2px $green;
+  }
+
+  &.error::after  {
+    content: '';
+    position: absolute;
+    right: 16px;
+    top: 22px;
+    background-image: url('src/assets/img/icons/cross.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    z-index: 10;
+  }
+
+  &.error  div {
+    font-size: 12px;
+    line-height: 1.33;
+    color: $red;
+    margin-top: 5px;
+  }
+
+  input::placeholder {
+    opacity: 0;
+    transition: all $as $ae;
+  }
+
+  input:focus::placeholder {
+    opacity: 1;
+  }
+
+  &.valid::after  {
+    content: '';
+    position: absolute;
+    right: 16px;
+    top: 22px;
+    background-image: url('src/assets/img/icons/check.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    z-index: 10;
+    background-color: $green;
+    border-radius: 10px;
+    background-size: 13px;
+  }
+}
