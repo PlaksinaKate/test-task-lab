@@ -1,0 +1,27 @@
+.text {
+  font-weight: 400;
+
+  &.text_18 {
+    font-size: 18px;
+    line-height: 1.77;
+  }
+
+  &.text_16 {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  &.text_14 {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
+  &.text_12 {
+    font-size: 12px;
+    line-height: 1.33;
+  }
+}
+
+.bold {
+  font-weight: 600;
+}
