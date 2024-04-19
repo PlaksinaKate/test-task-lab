@@ -3,8 +3,8 @@ body {
   margin: 0;
   padding: 0;
   max-width: 100%;
-  background: #222222;
-  color: $white;
+  background: $white;
+  color: $black;
   font-size: $fs+px;
   font-style: normal;
   font-weight: normal;
@@ -30,7 +30,7 @@ a img {
 
 a {
   text-decoration: none;
-  color: $white;
+  color: $black;
 }
 
 a span,
@@ -39,7 +39,7 @@ a font {
 }
 
 hr {
-  background: $white;
+  background: $black;
   height: 0.15rem;
   border: 0;
   margin: 1rem 0;
@@ -78,7 +78,7 @@ script {
 
 ::selection {
   color: $white;
-  background: transparentize($orange, 0.35);
+  background: transparentize($blue, 0.35);
 }
 
 *,
