@@ -1,5 +1,10 @@
-import { Header } from "../../sections/Header";
+import { Footer, Header } from "../../sections";
 
 export function MainPage() {
-  return ( <Header /> );
+  return (
+    <>
+      <Header />
+      <Footer />
+    </>
+  );
 }
