@@ -1,0 +1,41 @@
+@import "../../assets/scss/vars";
+@import "../../assets/scss/mixins";
+
+.section {
+  padding: 0 0 80px;
+}
+
+.text_content,
+.img {
+  width: 49%;
+}
+
+.text {
+  margin-top: 18px;
+}
+
+@include media("ml") {
+  .section {
+    padding: 0 0 56px;
+  }
+}
+
+@include media("mm") {
+  .wr {
+    flex-direction: column-reverse;
+  }
+
+  .text_content,
+  .img {
+    width: 100%;
+    text-align: center;
+  }
+
+  .text_content {
+    margin-top: 7px;
+  }
+
+  .text {
+    margin-top: 27px;
+  }
+}
