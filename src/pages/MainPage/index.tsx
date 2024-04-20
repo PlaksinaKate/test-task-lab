@@ -1,4 +1,4 @@
-import { Footer, Header, Hero } from "../../sections";
+import { Footer, Header, Hero, HowWeWork } from "../../sections";
 
 export function MainPage() {
   return (
@@ -6,6 +6,7 @@ export function MainPage() {
       <Header />
       <main>
         <Hero />
+        <HowWeWork />
       </main>
       <Footer />
     </>

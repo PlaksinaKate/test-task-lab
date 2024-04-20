@@ -1,0 +1,56 @@
+@import "../../assets/scss/vars";
+@import "../../assets/scss/mixins";
+
+.how_we_work {
+  padding: 80px 0;
+}
+
+.title {
+  text-align: center;
+}
+
+.steps {
+  margin-top: 61px;
+}
+
+.step {
+  flex-basis: calc((100% - 96px) / 4);
+}
+
+.wr_text {
+  margin-top: 16px;
+}
+
+.step_text {
+  margin-top: 4px;
+}
+
+@include media("ml") {
+  .how_we_work {
+    padding: 56px 0 24px;
+  }
+
+  .steps {
+    margin-top: 42px;
+  }
+
+  .step {
+    flex-basis: calc((100% - 34px) / 2);
+    margin-bottom: 32px;
+    display: flex;
+  }
+
+  .wr_text {
+    margin: 0 0 0 16px;
+  }
+}
+
+@include media("mm") {
+  .steps {
+    margin-top: 26px;
+  }
+
+  .step {
+    flex-basis: 100%;
+  }
+}
