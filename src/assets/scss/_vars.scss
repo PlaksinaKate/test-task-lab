@@ -11,11 +11,12 @@
 
 /* GRID */
 
-  $space:     8;                      // spacing grid
-  $grid_pad:  15;                     // padding column
-  $wr_pad:    24;                     // wrapper padding
-  $big_pad:   8.43;                   // big padding
-  $page_wr:   1872 + ($wr_pad*2);    // max-width content
+  $space:            8;                      // spacing grid
+  $grid_pad:        15;                     // padding column
+  $wr_pad:          20;                     // wrapper padding
+  $small_wr_pad:    16;                     // wrapper padding
+  $big_pad:         8.43;                   // big padding
+  $page_wr:         1175px + ($wr_pad*2);    // max-width content
 
   /* media */
   $media: (

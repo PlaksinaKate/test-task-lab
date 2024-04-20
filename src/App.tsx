@@ -1,11 +1,9 @@
-import { Wr } from "./components/ui-kit"
+import { MainPage } from "./pages/MainPage"
 
 function App() {
 
   return (
-    <Wr>
-      Hello
-    </Wr>
+    <MainPage />
   )
 }
 

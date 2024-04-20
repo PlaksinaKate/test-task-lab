@@ -1,0 +1,203 @@
+@import "../../assets/scss/vars";
+@import "../../assets/scss/mixins";
+
+.header {
+  padding: 26px 0;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.ul {
+  list-style-type: none;
+
+  li {
+    margin-left: 24px;
+  }
+}
+
+.link {
+  color: $white;
+  font-size: 16px;
+  line-height: 1.75;
+  padding-bottom: 4px;
+  border: 4px solid transparent;
+  border-bottom: unset;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -200%;
+    top: 100%;
+    width: 200%;
+    height: 1px;
+    display: block;
+    margin: -3px 0 0;
+    background: linear-gradient(
+      90deg,
+      rgba(175, 173, 181, 0.4) 25%,
+      $white 25%,
+      $white 75%,
+      rgba(175, 173, 181, 0.4) 75%
+    );
+
+    animation-duration: 0.45s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+    animation-name: gorizont-in;
+  }
+
+  &:hover::after {
+    animation-name: gorizont-out;
+  }
+}
+
+@keyframes gorizont-out {
+  0% {
+    left: -200%;
+  }
+  100% {
+    left: -50%;
+  }
+}
+
+@keyframes gorizont-in {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.burger_menu_button {
+  display: none;
+  position: relative;
+  width: 22px;
+  height: 12px;
+  padding: 31px 31px;
+  cursor: pointer;
+
+  .line {
+    position: absolute;
+    left: 32%;
+    width: 22px;
+    height: 2px;
+    background: $white;
+    overflow: hidden;
+    transition: all $as $ae;
+
+    &:nth-child(1) {
+      top: 25px;
+    }
+
+    &:nth-child(2) {
+      top: 35px;
+    }
+  }
+
+  &.clicked .line {
+    background-color: $black;
+
+    &:nth-child(1) {
+      transform: translateY(0.3em) rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      transform: translateY(-0.25em) rotate(-45deg);
+    }
+  }
+}
+
+.burger_menu {
+  display: none;
+}
+
+@include media("ml") {
+  .nav {
+    display: none;
+  }
+
+  .burger_menu_button {
+    display: block;
+  }
+
+  .header {
+    padding: 9px 0;
+  }
+
+  .burger_menu {
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    right: 0;
+    bottom: 0;
+    background-color: $white;
+    padding: 80px 0 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all $as $ae;
+    display: block;
+
+    &.active {
+      display: block;
+      left: 0;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .nav,
+    .ul {
+      display: block;
+    }
+
+    .li {
+      padding: 16px 0;
+      border-top: 1px solid $ll-gray;
+      margin: 0;
+      position: relative;
+    }
+
+    .li:last-child {
+      border-bottom: 1px solid $ll-gray;
+    }
+
+    .li::after {
+      content: '';
+      position: absolute;
+      top: 29px;
+      right: 8px;
+      mask-image: url('src/assets/img/icons/arrow.svg');
+      background-color: $gray;
+      width: 7px;
+      height: 14px;
+      transition: all $as $ae;
+    }
+
+    .link {
+      font-size: 18px;
+      line-height: 1.77;
+      color: $gray;
+      transition: all $as $ae;
+    }
+
+    .li:active .link {
+      color: $blue;
+    }
+
+    .link::after {
+      display: none;
+    }
+
+    .li:active::after {
+      background-color: $blue;
+    }
+  }
+}
