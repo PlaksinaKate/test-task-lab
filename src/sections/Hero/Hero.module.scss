@@ -1,0 +1,55 @@
+@import "../../assets/scss/vars";
+@import "../../assets/scss/mixins";
+
+.hero {
+  height: 100vh;
+
+  &::after {
+    content: '';
+    background-image: url('src/assets/img/main-bg.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    margin: 0 auto;
+    z-index: 0;
+  }
+}
+
+.wr {
+  height: 100vh;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+
+.title {
+  color: $white;
+  max-width: 748px;
+}
+
+.text {
+  color: $white;
+  margin: 18px 0 92px;
+}
+
+@include media('ml') {
+  .text {
+    margin: 17px 0 40px;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
+
+@include media('ms') {
+  .text {
+    margin: 10px 0 26px;
+  }
+}

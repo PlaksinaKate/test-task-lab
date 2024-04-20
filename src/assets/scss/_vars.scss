@@ -16,7 +16,7 @@
   $wr_pad:          20;                     // wrapper padding
   $small_wr_pad:    16;                     // wrapper padding
   $big_pad:         8.43;                   // big padding
-  $page_wr:         1175px + ($wr_pad*2);    // max-width content
+  $page_wr:         1175 + ($wr_pad*2);    // max-width content
 
   /* media */
   $media: (

@@ -6,10 +6,11 @@ interface ITitle {
   children: ReactNode;
   size: string;
   tag: ComponentType | keyof JSX.IntrinsicElements;
+  classNames?: string;
 }
 
-export function Title({ children, size, tag, ...rest }: ITitle & IRest) {
+export function Title({ children, size, tag, classNames, ...rest }: ITitle & IRest) {
   const Tag = tag;
 
-  return <Tag className={styles[size]} {...rest}>{children}</Tag>;
+  return <Tag className={`${styles[size]} ${classNames}`} {...rest}>{children}</Tag>;
 }
