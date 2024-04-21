@@ -22,7 +22,7 @@
 
 @include media("mm") {
   .wr {
-    flex-direction: column-reverse;
+    flex-direction: column-reverse !important;
   }
 
   .text_content,
