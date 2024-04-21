@@ -19,7 +19,7 @@
   cursor: pointer;
 
   &:hover {
-  transition: box-shadow $as $ae;
+    transition: box-shadow $as $ae;
     box-shadow: 0 15px 13px rgba($color: #000000, $alpha: 0.1);
   }
 }
@@ -76,4 +76,34 @@
 .swiper_nav_left {
   left: 0;
   transform: rotate(-180deg);
+}
+
+@include media("ml") {
+  .section {
+    padding: 33px 0;
+  }
+
+  .swiper {
+    margin: 8px 0 0 !important;
+    padding: 24px 0 58px !important;
+  }
+
+  .swiper_nav {
+    display: none;
+  }
+}
+
+@include media("mm") {
+  .section {
+    padding: 27px 0;
+  }
+
+  .swiper {
+    margin: 2px 0 0 !important;
+    padding: 24px 0 48px !important;
+  }
+
+  .slide {
+    height: unset !important;
+  }
 }

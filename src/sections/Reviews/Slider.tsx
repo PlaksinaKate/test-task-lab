@@ -25,8 +25,6 @@ export function Slider() {
 
   return (
     <Swiper
-      spaceBetween={32}
-      slidesPerView={3}
       modules={[Pagination]}
       pagination={{
         bulletClass: styles.swiper_pagination_bullet,
@@ -40,7 +38,20 @@ export function Slider() {
       }}
       onSlideChange={() => setSlideActive(swiper ? swiper.activeIndex : 0)}
       onSwiper={setSwiper}
-      centeredSlides
+      breakpoints={{
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 32,
+        },
+        475: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+        },
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+      }}
     >
       {reviews.map((review: ISlide) => {
         const { id, img, name, city, text } = review;
