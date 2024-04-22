@@ -38,7 +38,7 @@ export function Navigation({ swiper, slideActive }: INavigation) {
       <div
         onClick={handleSlideNext}
         className={`${styles.swiper_nav} ${styles.swiper_nav_right} ${
-          slideActive === reviews.length - 1 && styles.swiper_nav_disabled
+          slideActive === reviews.length - 3 && styles.swiper_nav_disabled
         }`}
       >
         <svg
