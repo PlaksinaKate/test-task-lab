@@ -1,0 +1,41 @@
+@import "../../assets/scss/vars";
+@import "../../assets/scss/mixins";
+
+.section {
+  background-color: $lll-gray;
+  padding: 68px 0 31px;
+}
+
+.item {
+  flex-basis: calc((100% - 32px) / 2);
+  margin-bottom: 37px;
+}
+
+.text {
+  margin-top: 17px;
+}
+
+@include media("ml") {
+  .section {
+    padding: 20px 0 12px;
+  }
+
+  .item {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+
+  .text {
+    margin-top: 46px;
+  }
+}
+
+@include media("mm") {
+  .section {
+    padding: 20px 0 1px;
+  }
+
+  .text {
+    margin-top: 14px;
+  }
+}
