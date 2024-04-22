@@ -3,7 +3,7 @@
 .wrapper {
   position: relative;
   display: block;
-  margin: 10px;
+  margin: 0;
   width: max-content;
 
   span,
@@ -29,6 +29,7 @@
     border: none;
     border-radius: 4px;
     transition: all $as $ae;
+    width: 100%;
   }
 
   input:focus,

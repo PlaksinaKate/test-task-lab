@@ -4,14 +4,15 @@ import styles from "./Checkbox.module.scss";
 interface ICheckbox {
   label: string;
   setstate: (checked: boolean) => void;
-  checked: boolean
+  checked: boolean;
+  classNames?: string
 }
 
-export function Checkbox({ label, checked, setstate,  ...rest }: ICheckbox & IRest) {
+export function Checkbox({ label, checked, setstate, classNames,  ...rest }: ICheckbox & IRest) {
   console.log("checked", checked);
 
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${classNames}`}>
       <input
         type="checkbox"
         onChange={() => setstate(!checked)}

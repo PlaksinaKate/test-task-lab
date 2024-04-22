@@ -8,6 +8,7 @@ interface IInput {
   error?: string;
   placeholder: string;
   isValid?: boolean;
+  className?: string
 }
 
 export function Input({
@@ -17,13 +18,14 @@ export function Input({
   error,
   placeholder,
   isValid,
+  className,
   ...rest
 }: IInput & IRest) {
   return (
     <label
-      className={`${error ? styles.error : null} ${
-        isValid ? styles.valid : null
-      } ${styles.wrapper} `}
+      className={`${error ? styles.error : ''} ${
+        isValid ? styles.valid : ''
+      } ${styles.wrapper} ${className}`}
     >
       <input
         className={value !== "" ? styles.focus : ""}
