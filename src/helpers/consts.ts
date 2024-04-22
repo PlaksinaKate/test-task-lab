@@ -18,5 +18,5 @@ export const PATH = {
 };
 
 export const ERRORS = {
-  phoneValid: "Телефон должен быть введен в формате: +79999999999",
+  phoneValid: "Телефон должен быть введен в формате: 89999999999",
 };
