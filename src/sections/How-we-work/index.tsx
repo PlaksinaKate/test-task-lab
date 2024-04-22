@@ -12,22 +12,22 @@ export function HowWeWork() {
         </Title>
         <div className={`row space-between ${styles.steps}`}>
           <Step
-            img={"src/assets/img/how-we-work/waiting.svg"}
+            img={"./img/how-we-work/waiting.svg"}
             title={"Прочитай задание внимательно"}
             text={"Думаю у тебя не займет это больше двух-трех минут"}
           />
           <Step
-            img={"src/assets/img/how-we-work/delivery-truck.svg"}
+            img={"./img/how-we-work/delivery-truck.svg"}
             title={"Прочитай задание внимательно"}
             text={"Думаю у тебя не займет это больше двух-трех минут"}
           />
           <Step
-            img={"src/assets/img/how-we-work/secure.svg"}
+            img={"./img/how-we-work/secure.svg"}
             title={"Прочитай задание внимательно"}
             text={"Думаю у тебя не займет это больше двух-трех минут"}
           />
           <Step
-            img={"src/assets/img/how-we-work/money-bags.svg"}
+            img={"./img/how-we-work/money-bags.svg"}
             title={"Прочитай задание внимательно"}
             text={"Думаю у тебя не займет это больше двух-трех минут"}
           />

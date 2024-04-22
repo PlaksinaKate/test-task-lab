@@ -19,7 +19,7 @@ export function ThirdBlock() {
             </Text>
           </div>
           <div className={styles.img}>
-            <img src="src/assets/img/3-block.png" alt="3-block" />
+            <img src="./img/3-block.png" alt="3-block" />
           </div>
         </div>
       </Wr>
