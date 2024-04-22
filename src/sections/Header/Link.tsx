@@ -10,7 +10,10 @@ interface IHeaderLink {
 export function HeaderLink({ linkName, link, ...rest }: IHeaderLink & IRest) {
   return (
     <li className={styles.li} {...rest}>
-      <Link className={styles.link} to={link}>
+      <Link className={styles.link} to={{
+         pathname: "/",
+         hash: link,
+      }}>
         {linkName}
       </Link>
     </li>

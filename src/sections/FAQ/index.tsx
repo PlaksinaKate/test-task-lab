@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Title, Wr } from "../../components/ui-kit";
 import styles from "./FAQ.module.scss";
 import { faqInfo } from "./faq.info";
+import { PATH } from "../../helpers/consts";
 
 interface IAccordionItem {
   title: string;
@@ -10,7 +11,7 @@ interface IAccordionItem {
 
 export function FAQ() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id={PATH.faq.link}>
       <Wr>
         <Title size={"h2"} tag={"h2"} classNames={styles.title}>
           Вопросы и ответы

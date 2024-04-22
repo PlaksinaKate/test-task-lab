@@ -8,7 +8,7 @@ export function Navigation() {
       <ul className={`row center ${styles.ul}`}>
         {Object.values(PATH).map((path, index) => {
           const { name, link } = path;
-          return <HeaderLink key={index} linkName={name} link={link} />;
+          return <HeaderLink key={index} linkName={name} link={"#" + link} />;
         })}
       </ul>
     </nav>
