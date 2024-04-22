@@ -1,18 +1,22 @@
 export const PATH = {
-  'how-we-work': {
-    'name': 'Как это работает',
-    'link': '#how-we-work'
+  "how-we-work": {
+    name: "Как это работает",
+    link: "#how-we-work",
   },
-  '3-block': {
-    'name': '3-й блок',
-    'link': '#3-block'
+  "3-block": {
+    name: "3-й блок",
+    link: "#3-block",
   },
-  'faq': {
-    'name': 'Вопросы и ответы',
-    'link': '#faq'
+  faq: {
+    name: "Вопросы и ответы",
+    link: "#faq",
   },
-  'form': {
-    'name': 'Форма',
-    'link': '#form'
+  form: {
+    name: "Форма",
+    link: "#form",
   },
-}
+};
+
+export const ERRORS = {
+  phoneValid: "Телефон должен быть введен в формате: +79999999999",
+};

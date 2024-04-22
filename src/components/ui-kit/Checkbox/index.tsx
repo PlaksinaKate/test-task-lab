@@ -9,8 +9,6 @@ interface ICheckbox {
 }
 
 export function Checkbox({ label, checked, setstate, classNames,  ...rest }: ICheckbox & IRest) {
-  console.log("checked", checked);
-
   return (
     <div className={`${styles.wrapper} ${classNames}`}>
       <input
