@@ -1,0 +1,94 @@
+@import "../../assets/scss/vars";
+@import "../../assets/scss/mixins";
+
+.section {
+  padding: 80px 0 56px;
+}
+
+.title {
+  text-align: center;
+}
+
+.accordion {
+  margin-top: 41px;
+}
+
+.item {
+  padding: 24px 0;
+  border-top: 1px solid $lll-gray;
+  cursor: pointer;
+}
+
+.accordion_title {
+  font-size: 18px;
+  line-height: 1.77;
+  font-weight: 600;
+  transition: color $as $ae;
+
+  &:hover {
+    color: $d-blue;
+  }
+
+  .plus {
+    margin-top: 5px;
+    padding: 12px;
+    border-radius: 17px;
+    border: 2px solid $black;
+    position: relative;
+    width: max-content;
+    display: inline-block;
+    transition: border $as $ae;
+  }
+
+  &:hover .plus {
+    border: 2px solid $d-blue;
+  }
+
+  .plus::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    mask-image: url("src/assets/img/icons/plus.svg");
+    width: 12px;
+    height: 12px;
+    background-color: $black;
+    transition: all $as $ae;
+  }
+
+  &:hover .plus::after {
+    background-color: $d-blue;
+  }
+}
+
+.content {
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+  transition: all $as * 2 $ae;
+}
+
+.content,
+.accordion_title div:first-child {
+  max-width: 90%;
+}
+
+.active {
+  .plus::after {
+    transform: rotate(45deg);
+  }
+
+  .content {
+    margin-top: 24px;
+    opacity: 1;
+    height: auto;
+  }
+}
+
+@include media("ml") {
+  .section {
+    padding: 56px 0 32px;
+  }
+}

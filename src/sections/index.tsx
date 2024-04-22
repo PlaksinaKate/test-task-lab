@@ -4,5 +4,6 @@ import { Hero } from "./Hero";
 import { HowWeWork } from "./How-we-work";
 import { ThirdBlock } from "./ThirdBlock";
 import { Reviews } from "./Reviews";
+import { FAQ } from "./FAQ";
 
-export { Footer, Header, Hero, HowWeWork, ThirdBlock, Reviews };
+export { Footer, Header, Hero, HowWeWork, ThirdBlock, Reviews, FAQ };

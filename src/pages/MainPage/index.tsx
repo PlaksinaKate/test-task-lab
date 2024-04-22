@@ -1,4 +1,4 @@
-import { Footer, Header, Hero, HowWeWork, Reviews, ThirdBlock } from "../../sections";
+import { FAQ, Footer, Header, Hero, HowWeWork, Reviews, ThirdBlock } from "../../sections";
 
 export function MainPage() {
   return (
@@ -9,6 +9,7 @@ export function MainPage() {
         <HowWeWork />
         <ThirdBlock />
         <Reviews />
+        <FAQ />
       </main>
       <Footer />
     </>
