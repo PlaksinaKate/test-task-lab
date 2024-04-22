@@ -17,6 +17,11 @@
   flex-basis: calc((100% - 96px) / 4);
 }
 
+.img {
+  max-width: 72px;
+  height: 72px;
+}
+
 .wr_text {
   margin-top: 16px;
 }
@@ -52,5 +57,10 @@
 
   .step {
     flex-basis: 100%;
+  }
+
+  .img {
+    max-width: 73px;
+    height: 56px;
   }
 }

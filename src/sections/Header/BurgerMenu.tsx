@@ -2,6 +2,10 @@ import { Wr } from "../../components/ui-kit";
 import styles from "./Header.module.scss";
 import { Navigation } from "./Navigation";
 
+export interface IOnClose {
+  onClose: () => void;
+}
+
 interface IBurgerMenu {
   active: boolean;
 }
@@ -12,14 +16,14 @@ interface IBurgerMenuButton {
 }
 
 export function BurgerMenuButton({ clicked, setClicked }: IBurgerMenuButton) {
-  const onBurgerMenuButtonClick = () => setClicked(!clicked);
+  const onClose = () => setClicked(!clicked);
 
   return (
     <div
       className={`${styles.burger_menu_button} ${
         clicked ? styles.clicked : ""
       }`}
-      onClick={onBurgerMenuButtonClick}
+      onClick={onClose}
     >
       <div className={styles.line}></div>
       <div className={styles.line}></div>
@@ -27,11 +31,15 @@ export function BurgerMenuButton({ clicked, setClicked }: IBurgerMenuButton) {
   );
 }
 
-export function BurgerMenu({ active }: IBurgerMenu) {
+export function BurgerMenu({
+  active,
+  onClose
+}: IBurgerMenu & IOnClose) {
+    
   return (
     <div className={`${styles.burger_menu} ${active ? styles.active : ""}`}>
       <Wr>
-        <Navigation />
+        <Navigation onClose={onClose} />
       </Wr>
     </div>
   );

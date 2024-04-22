@@ -8,6 +8,8 @@ import { Navigation } from "./Navigation";
 export function Header() {
   const [openBurgerMenu, setOpenBurgerMenu] = useState<boolean>(false);
 
+  const onClose = () => setOpenBurgerMenu(!openBurgerMenu);
+
   return (
     <>
       <header className={styles.header}>
@@ -16,7 +18,7 @@ export function Header() {
             <Link to={"#"}>
               <Logo color={openBurgerMenu ? "#191C1F" : "white"} />
             </Link>
-            <Navigation />
+            <Navigation onClose={onClose} />
             <BurgerMenuButton
               clicked={openBurgerMenu}
               setClicked={setOpenBurgerMenu}
@@ -24,7 +26,10 @@ export function Header() {
           </div>
         </Wr>
       </header>
-      <BurgerMenu active={openBurgerMenu} />
+      <BurgerMenu
+        active={openBurgerMenu}
+        onClose={onClose}
+      />
     </>
   );
 }
