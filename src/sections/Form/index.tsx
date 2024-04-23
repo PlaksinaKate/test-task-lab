@@ -5,6 +5,7 @@ import { ERRORS, PATH } from "../../helpers/consts";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { setFormData } from "../../store/slices/form-slice";
 import { api } from "../../helpers/api";
+import { validation } from "./form.validation";
 
 export function Form() {
   const [isChecked, setIsChecked] = useState<boolean>(false);
@@ -39,6 +40,7 @@ export function Form() {
       setErrorValid(ERRORS.phoneValid);
       return;
     }
+
     setErrorValid("");
     setValid({ name: true, phone: true });
     if (isChecked) api.sendForm();
@@ -88,10 +90,3 @@ export function Form() {
     </section>
   );
 }
-
-const validation = {
-  phone: (value: string) => {
-    const regex = new RegExp(/\+7|8\d{10}/);
-    return regex.test(value);
-  },
-};

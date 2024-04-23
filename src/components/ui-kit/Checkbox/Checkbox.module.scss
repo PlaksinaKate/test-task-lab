@@ -41,7 +41,7 @@
   input[type="checkbox"]:checked + label:before {
     background: $blue;
     box-shadow: 0 0 0 2px $blue;
-    background-image: url('./img/icons/check.svg');
+    background-image: url('../img/icons/check.svg');
     background-repeat: no-repeat;
     background-position: center center;
   }
