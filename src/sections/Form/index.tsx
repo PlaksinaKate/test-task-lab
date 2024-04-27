@@ -3,8 +3,7 @@ import { Button, Checkbox, Input, Title, Wr } from "../../components/ui-kit";
 import styles from "./Form.module.scss";
 import { ERRORS, PATH } from "../../helpers/consts";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
-import { setFormData } from "../../store/slices/form-slice";
-import { api } from "../../helpers/api";
+import { fetchAddUser, setFormData } from "../../store/slices/form-slice";
 import { validation } from "./form.validation";
 
 export function Form() {
@@ -47,7 +46,7 @@ export function Form() {
 
     setErrorValid("");
     setValid({ name: true, phone: true });
-    if (isChecked) api.sendForm();
+    if (isChecked) dispatch(fetchAddUser());
   };
 
   return (

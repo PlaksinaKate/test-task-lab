@@ -1,24 +1,22 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { api } from "../../helpers/api";
+import { IForm, IUser } from "./form-slice.interfaces";
 
-export interface IForm {
-  name: string,
-  phone: string,
-  status: string | null,
-  error: unknown
-}
-
-const initialState: IForm = {
+const initialState: IForm & IUser = {
   name: "",
   phone: "",
   status: null,
   error: null,
 };
 
-export const fetchForm = createAsyncThunk("form/fetchForm", async function () {
-  const data = await api.sendForm();
-  return data;
-});
+export const fetchAddUser = createAsyncThunk(
+  "form/fetchForm",
+  async function (_, { getState }) {
+    const { name, phone } = getState().form;
+    const data = await api.sendForm({ name, phone });
+    return data;
+  }
+);
 
 const formSlice = createSlice({
   name: "form",
@@ -30,14 +28,14 @@ const formSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(fetchForm.pending, (state) => {
+    builder.addCase(fetchAddUser.pending, (state) => {
       state.status = "loading";
     });
-    builder.addCase(fetchForm.fulfilled, (state, action) => {
+    builder.addCase(fetchAddUser.fulfilled, (state, action) => {
       state.status = "resolved";
       state.name = action.payload;
     });
-    builder.addCase(fetchForm.rejected, (state, action) => {
+    builder.addCase(fetchAddUser.rejected, (state, action) => {
       state.status = "rejected";
       state.error = action.payload;
     });
