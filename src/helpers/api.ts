@@ -1,14 +1,9 @@
-import { store } from "../store";
-
 const sendForm = async () => {
-  const { name, phone } = store.getState().form;
-
-  return await fetch(`"https://api.ru/?name=${name}&phone=${phone}`)
-    .then((response) => console.log(response.json()))
-    .catch((error) => {
-      const errorMessage: string = error.message;
-      console.error(errorMessage);
-    });
+  return await fetch(`"https://jsonplaceholder.typicode.com/users`, {
+    method: "POST",
+  })
+    .then((response) => response.json())
+    .catch((error) => error);
 };
 
 export const api = { sendForm };

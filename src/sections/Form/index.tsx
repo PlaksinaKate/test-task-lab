@@ -16,6 +16,10 @@ export function Form() {
   });
   const { name, phone } = useAppSelector((state) => state.form);
   const dispatch = useAppDispatch();
+  const {status, error} = useAppSelector(state => state.form);
+
+  console.log('status', status)
+  console.log('error', error)
 
   const onChangeName = (e: { target: { value: any } }) => {
     dispatch(
